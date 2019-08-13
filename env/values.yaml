@@ -1,0 +1,31 @@
+PipelineSecrets: {}
+cleanup:
+  Annotations:
+    helm.sh/hook: pre-delete
+    helm.sh/hook-delete-policy: hook-succeeded
+  Args:
+  - --cleanup
+controllerbuild:
+  enabled: true
+controllerworkflow:
+  enabled: false
+dockerRegistry: registry.cn-shenzhen.aliyuncs.com
+jenkins:
+  Servers:
+    Global:
+      EnvVars:
+        TILLER_NAMESPACE: kube-system
+  enabled: false
+prow: {}
+
+
+## env config for redis-ha
+redis-ha:
+  redis:
+    port: 6379
+      masterGroupName: redis_cluster
+  persistentVolume:
+    storageClass: "alicloud-disk-efficiency"
+    size: 20Gi
+
+
