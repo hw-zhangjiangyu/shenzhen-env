@@ -19,7 +19,7 @@ jenkins:
 prow: {}
 
 
-## env config for redis-ha
+## shenzhen-env env config for redis-ha
 redis-ha:
   redis:
     port: 6379
