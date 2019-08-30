@@ -23,7 +23,7 @@ prow: {}
 redis-ha:
   redis:
     port: 6379
-      masterGroupName: redis_cluster
+    masterGroupName: redis_cluster
   persistentVolume:
     storageClass: "alicloud-disk-efficiency"
     size: 20Gi
