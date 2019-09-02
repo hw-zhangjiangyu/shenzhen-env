@@ -1,6 +1,6 @@
 CHART_REPO := http://172.21.13.12:8080
 DIR := "env"
-NAMESPACE := "edas-shenzhen"
+NAMESPACE := "default"
 OS := $(shell uname)
 
 build: clean

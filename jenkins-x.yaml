@@ -1,8 +1,8 @@
 env:
 - name: DEPLOY_NAMESPACE
-  value: edas-shenzhen
+  value: default
 pipelineConfig:
   env:
   - name: DEPLOY_NAMESPACE
-    value: edas-shenzhen
+    value: default
   pipelines: {}

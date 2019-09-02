@@ -6,14 +6,14 @@ pipeline {
     label "jenkins-maven"
   }
   environment {
-    DEPLOY_NAMESPACE = "edas-shenzhen"
+    DEPLOY_NAMESPACE = "default"
   }
   stages {
     stage('Validate Environment') {
       steps {
         container('maven') {
           dir('env') {
-            sh 'jx step helm build'
+            sh 'envctl step helm build'
           }
         }
       }
@@ -25,7 +25,7 @@ pipeline {
       steps {
         container('maven') {
           dir('env') {
-            sh 'jx step helm apply'
+            sh 'envctl step helm apply'
           }
         }
       }
