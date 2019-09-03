@@ -10,5 +10,5 @@ redis-ha:
 quickstart-demo:
   image:
     repository: registry.cn-beijing.aliyuncs.com/jiubian/test
-    tag: 1.2
+    tag: 1.1
 
