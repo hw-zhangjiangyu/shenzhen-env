@@ -8,7 +8,8 @@ redis-ha:
     size: 20Gi
 
 quickstart-demo:
+  replicaCount: 1
   image:
     repository: registry.cn-beijing.aliyuncs.com/jiubian/test
-    tag: 1.1
+    tag: 1.3
 
