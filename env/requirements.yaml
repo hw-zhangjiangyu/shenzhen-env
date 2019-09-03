@@ -2,3 +2,6 @@ dependencies:
 - name: redis-ha
   repository: http://chartmuseum-chartmuseum:8080/
   version: 3.7.1
+- name: env-controller
+  repository: http://chartmuseum-chartmuseum:8080/
+  version: 0.0.1

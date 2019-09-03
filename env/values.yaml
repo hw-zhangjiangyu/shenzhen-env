@@ -7,4 +7,7 @@ redis-ha:
     storageClass: "alicloud-disk-efficiency"
     size: 20Gi
 
+env-controller:
+  image:
+    tag: 1.0.10
 
