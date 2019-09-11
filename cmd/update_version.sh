@@ -31,7 +31,8 @@ then
   exit $?
 fi
 
-sed -i "${lineNumber}c ${chartName}: ${releaseVersion}" ../env/requirements.yaml
+versionLineNumber=$((${lineNumber} + 2))
+sed -i "${versionLineNumber}c version: ${releaseVersion}" ../env/requirements.yaml
 if [ $? != 0 ];
 then
   echo "Replace release version failed"
