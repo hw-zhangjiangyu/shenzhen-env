@@ -4,4 +4,4 @@ dependencies:
   version: 3.7.1
 - name: quickstart-demo
   repository: http://chartmuseum-chartmuseum:8080/
-  version: 1568208536
+  version: 1568210208
