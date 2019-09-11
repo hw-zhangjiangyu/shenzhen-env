@@ -32,7 +32,7 @@ then
 fi
 
 versionLineNumber=$((${lineNumber} + 2))
-sed -i "${versionLineNumber}c version: ${releaseVersion}" env/requirements.yaml
+sed -i "${versionLineNumber}c \  version: ${releaseVersion}" env/requirements.yaml
 if [ $? != 0 ];
 then
   echo "Replace release version failed"
