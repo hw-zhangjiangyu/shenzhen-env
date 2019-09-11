@@ -16,7 +16,7 @@ then
 fi
 
 
-nameAndVersion=`grep ${chartName} ../env/requirements.yaml`
+nameAndVersion=`grep ${chartName} env/requirements.yaml`
 if [ $? != 0 ];
 then
   echo "$chartName is not found in current env"
@@ -24,7 +24,7 @@ then
 fi
 
 # sed "$linenumberc"
-lineNumber=`grep -n ${chartName} ../env/requirements.yaml |awk -F: '{print $1}'`
+lineNumber=`grep -n ${chartName} env/requirements.yaml |awk -F: '{print $1}'`
 if [ -z $lineNumber ]
 then
   echo "$chartName is not found in current env"
@@ -32,7 +32,7 @@ then
 fi
 
 versionLineNumber=$((${lineNumber} + 2))
-sed -i "${versionLineNumber}c version: ${releaseVersion}" ../env/requirements.yaml
+sed -i "${versionLineNumber}c version: ${releaseVersion}" env/requirements.yaml
 if [ $? != 0 ];
 then
   echo "Replace release version failed"
