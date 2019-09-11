@@ -38,5 +38,3 @@ then
   echo "Replace release version failed"
   exit $?
 fi
-
-date > cmd/update_time
