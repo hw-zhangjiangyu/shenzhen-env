@@ -3,13 +3,13 @@
 chartName=$1
 releaseVersion=$2
 
-if [ -z $chartName ];
+if [ -z ${chartName} ];
 then
   echo "chart name is required!"
   exit 1
 fi
 
-if [ -z $releaseVersion ];
+if [ -z ${releaseVersion} ];
 then
   echo "release version is required"
   exit 1
@@ -32,7 +32,7 @@ then
 fi
 
 versionLineNumber=$((${lineNumber} + 2))
-sed -i "${versionLineNumber}c \  version: ${releaseVersion}" env/requirements.yaml
+sed -i "${versionLineNumber}c \  version: \"${releaseVersion}\"" env/requirements.yaml
 if [ $? != 0 ];
 then
   echo "Replace release version failed"
